@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <div className="bg-slate-100 p-2">
-        <p className="text-sm font-bold"> NextShop</p>
+        <p className="text-2x1 font-bold"> NextShop</p>
         <p> SeungHyun Hong </p>
       </div>
     </div>
