@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import React from 'react';
+import { React } from 'react';
 
-export default function ProductItem({ product, addToCartHandler }) {
+export default function Productitem({ product }) {
   return (
     <div className="card">
       <Link href={`/product/${product.slug}`}>
@@ -10,7 +9,7 @@ export default function ProductItem({ product, addToCartHandler }) {
           <img
             src={product.image}
             alt={product.name}
-            className="rounded shadow object-cover h-64 w-full"
+            className="rounded shadow"
           />
         </a>
       </Link>
@@ -22,13 +21,7 @@ export default function ProductItem({ product, addToCartHandler }) {
         </Link>
         <p className="mb-2">{product.brand}</p>
         <p>${product.price}</p>
-        <button
-          className="primary-button"
-          type="button"
-          onClick={() => addToCartHandler(product)}
-        >
-          Add to cart
-        </button>
+        <button className="primary-button">Add to Cart</button>
       </div>
     </div>
   );
