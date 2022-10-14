@@ -1,18 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
-import { XCircleIcon } from '@heroicons/react/outline';
 import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
-import { useRouter } from 'next/router';
+import { XCircleIcon } from '@heroicons/react/outline';
 import dynamic from 'next/dynamic';
 
 function CartScreen() {
-  const router = useRouter;
+  const router = useRouter();
   const { state, dispatch } = useContext(Store);
+
   const {
     cart: { cartItems },
   } = state;
+
   const removeItemHandler = (item) => {
     dispatch({ type: 'CART_REMOVE_ITEM', payload: item });
   };
@@ -27,7 +29,7 @@ function CartScreen() {
       <h1 className="mb-4 text-xl">Shopping Cart</h1>
       {cartItems.length === 0 ? (
         <div>
-          Cart is empty. <Link href="/">Go Shopping</Link>
+          Cart is Empty. <Link href="/">Go Shopping</Link>
         </div>
       ) : (
         <div className="grid md:grid-cols-4 md:gap-5">
@@ -35,9 +37,9 @@ function CartScreen() {
             <table className="min-w-full">
               <thead className="border-b">
                 <tr>
-                  <th className="p-5 text left">Item</th>
-                  <th className="p-5 text light">Quantity</th>
-                  <th className="p-5 text light">Price</th>
+                  <th className="p-5 text-left">Item</th>
+                  <th className="p-5 text-right">Quantity</th>
+                  <th className="p-5 text-right">Price</th>
                   <th className="p-5">Action</th>
                 </tr>
               </thead>
@@ -45,14 +47,14 @@ function CartScreen() {
                 {cartItems.map((item) => (
                   <tr key={item.slug} className="border-b">
                     <td>
-                      <Link href={`/product/${item.slug}`}>
+                      <Link href={'/product/${item.slug}'}>
                         <a className="flex items-center">
                           <Image
                             src={item.image}
                             alt={item.name}
                             width={50}
                             height={50}
-                          ></Image>
+                          />
                           &nbsp;
                           {item.name}
                         </a>
@@ -93,8 +95,8 @@ function CartScreen() {
               </li>
               <li>
                 <button
-                  onClick={() => router.push('login?redirect/shipping')}
-                  className="primary-button w -full"
+                  onClick={() => router.push('login?redirect=/shipping')}
+                  className="primary-button w-full"
                 >
                   Check Out
                 </button>

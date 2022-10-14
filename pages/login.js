@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import { useForm } from 'react-hook-form';
 
@@ -18,9 +18,9 @@ export default function LoginScreen() {
     <Layout title="Login">
       <form
         className="mx-auto max-w-screen-md"
-        onsubmit={handleSubmit(submitHandler)}
+        onSubmit={handleSubmit(submitHandler)}
       >
-        <h1 className="mb-4 text-xl">Login </h1>
+        <h1 className="mb-4 text-xl">Login</h1>
         <div className="mb-4">
           <label htmlFor="email">Email</label>
           <input
@@ -54,7 +54,7 @@ export default function LoginScreen() {
             autoFocus
           />
           {errors.password && (
-            <div className="text-red-500">{errors.password.message}</div>
+            <div className="text-red-500 ">{errors.password.message}</div>
           )}
         </div>
 
