@@ -28,6 +28,9 @@ export default function profile() {
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto flex flex-col">
             <div className="lg:w-4/6 mx-auto">
+              <a className="text-4xl grid place-items-center underline font-bold text-cyan-500">
+                Profile
+              </a>
               <div className="rounded-lg h-64 overflow-hidden"></div>
               <div className="flex flex-col sm:flex-row mt-10">
                 <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
@@ -49,7 +52,7 @@ export default function profile() {
                     <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
                     <p
                       className="text-lg h-full border-2 border-black-200 border-opacity-60
-                        rounded-lg overflow-hidden bg-violet-100"
+                        rounded-lg overflow-hidden bg-violet-200"
                     >
                       이름: 홍승현
                       <br />
@@ -75,7 +78,7 @@ export default function profile() {
                 <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                   <p
                     className="leading-relaxed text-xl mb-4 h-full border-2 border-gray-200 border-opacity-60
-                        rounded-lg overflow-hidden bg-violet-100"
+                        rounded-lg overflow-hidden bg-violet-200"
                   >
                     <br />
                     <br />
