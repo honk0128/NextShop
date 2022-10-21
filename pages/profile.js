@@ -89,6 +89,8 @@ export default function profile() {
                     MongoDB....
                     <br />
                     <br />
+                    목표: 많은 경험을 쌓고 백엔드 개발에 숙달되어 원하는 회사에
+                    취업하고 싶습니다.
                   </p>
                 </div>
               </div>
