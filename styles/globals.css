@@ -47,3 +47,7 @@ textarea {
     background: black;
   }
 }
+
+.dropdown-link {
+  @apply flex p-2 hover:bg-gray-200;
+}
