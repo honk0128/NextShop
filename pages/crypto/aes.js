@@ -29,7 +29,7 @@ export default function AESScreen() {
       iv = '';
       ivHex = '';
     } else if (mode === 'CBC') {
-      iv = forge.random.getBytesSync(keyLength / 8);
+      iv = forge.random.getBytesSync(128 / 8);
       ivHex = forge.util.bytesToHex(iv);
     }
     setKey(key);
