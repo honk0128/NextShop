@@ -1,7 +1,6 @@
 var forge = require('node-forge');
 var fs = require('fs');
 var pki = forge.pki;
-var rsa = forge.pki.rsa;
 
 // 루트인증기관에서 자체서명인증서 생성, 저장
 
