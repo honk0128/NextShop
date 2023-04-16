@@ -101,7 +101,7 @@ export default function Layout({ title, children }) {
         </header>
         <main className="container m-auto mt-4">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner bg-red-100">
-          <p>Copyright &copy; 2022 Nextshop</p>
+          <p>Copyright &copy; 2023 Nextshop</p>
         </footer>
       </div>
     </>
